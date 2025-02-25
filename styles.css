@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0A2540;
+    color: #F7F7F7;
+}
+
+nav {
+    background-color: #121212;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #00D1FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #F7F7F7;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0A2540, #121212);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta {
+    background-color: #00D1FF;
+    color: #121212;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: #B0BEC5;
+}
+
+#beneficios, #curso, #precios, #contacto {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.beneficios-grid, .precios-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.beneficios-grid div, .precios-grid .plan {
+    background-color: #121212;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 200px;
+}
+
+footer {
+    background-color: #121212;
+    padding: 20px;
+    text-align: center;
+}
