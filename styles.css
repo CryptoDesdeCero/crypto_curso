@@ -3,119 +3,114 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #0A2540;
     color: #F7F7F7;
+    line-height: 1.6;
 }
 
 nav {
     background-color: #121212;
-    padding: 1rem;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
-
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
-
 nav a {
     color: #00D1FF;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
-
 nav a:hover {
     color: #F7F7F7;
 }
 
 .hero {
-    text-align: center;
     padding: 100px 20px;
+    text-align: center;
     background: linear-gradient(135deg, #0A2540, #121212);
 }
-
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.hero p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 .cta {
     background-color: #00D1FF;
     color: #121212;
-    border: none;
     padding: 15px 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
     border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
-
 .cta:hover {
     background-color: #B0BEC5;
+    transform: scale(1.05);
 }
 
-#beneficios, #curso, #precios, #contacto {
-    padding: 50px 20px;
+.benefits, .course, .inner-circle, .ebooks, .blog, .contact {
+    padding: 60px 20px;
     text-align: center;
 }
-
-.beneficios-grid, .precios-grid {
+.benefits-grid, .ebooks-grid, .blog-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
 }
-
-.beneficios-grid div, .precios-grid .plan {
+.benefit-item, .ebook-item, .blog-item {
     background-color: #121212;
     padding: 20px;
-    margin: 10px;
     border-radius: 10px;
-    width: 30%;
-    min-width: 200px;
+    width: 280px;
+}
+.benefit-item h3, .ebook-item h3, .blog-item h3 {
+    color: #00D1FF;
+}
+
+.lead-magnet {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #00D1FF, #0A2540);
+    text-align: center;
+}
+.lead-magnet form, .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+textarea {
+    height: 100px;
+}
+
+.read-more {
+    color: #00D1FF;
+    text-decoration: none;
+}
+.read-more:hover {
+    color: #F7F7F7;
 }
 
 footer {
     background-color: #121212;
     padding: 20px;
     text-align: center;
-}
-
-.hero {
-    position: relative;
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #0A2540, #121212);
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://via.placeholder.com/1500x500?text=Fondo+Blockchain') no-repeat center;
-    opacity: 0.2;
-    z-index: 0;
-}
-
-.hero h1, .hero p, .hero .cta {
-    position: relative;
-    z-index: 1;
-}
-
-.cta {
-    background-color: #00D1FF;
-    color: #121212;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.cta:hover {
-    background-color: #B0BEC5;
-    transform: scale(1.05);
 }
