@@ -1,23 +1,32 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #0A2540;
+    background: #0A2540;
     color: #F7F7F7;
-    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #0A2540, #121212);
 }
 
 nav {
-    background-color: #121212;
+    background: rgba(18, 18, 18, 0.8);
     padding: 20px;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
     z-index: 10;
 }
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     margin: 0;
     padding: 0;
 }
@@ -25,92 +34,118 @@ nav a {
     color: #00D1FF;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 nav a:hover {
     color: #F7F7F7;
 }
 
 .hero {
-    padding: 100px 20px;
+    padding: 150px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #0A2540, #121212);
+    position: relative;
 }
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
+    margin: 0;
 }
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.4rem;
+    margin: 20px 0;
 }
-
 .cta {
-    background-color: #00D1FF;
+    background: #00D1FF;
     color: #121212;
-    padding: 15px 30px;
+    padding: 15px 40px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    border-radius: 5px;
     display: inline-block;
+    box-shadow: 0 5px 15px rgba(0, 209, 255, 0.3);
     transition: all 0.3s ease;
 }
 .cta:hover {
-    background-color: #B0BEC5;
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 209, 255, 0.5);
+}
+.video-placeholder {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
-.benefits, .course, .inner-circle, .ebooks, .blog, .contact {
-    padding: 60px 20px;
-    text-align: center;
+.benefits {
+    padding: 80px 20px;
 }
-.benefits-grid, .ebooks-grid, .blog-grid {
+.benefits-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
 }
-.benefit-item, .ebook-item, .blog-item {
-    background-color: #121212;
-    padding: 20px;
-    border-radius: 10px;
-    width: 280px;
+.benefit-item {
+    background: rgba(18, 18, 18, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
-.benefit-item h3, .ebook-item h3, .blog-item h3 {
+.benefit-item:hover {
+    transform: translateY(-10px);
+}
+.benefit-item h3 {
     color: #00D1FF;
+    font-size: 1.6rem;
 }
 
 .lead-magnet {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #00D1FF, #0A2540);
+    padding: 80px 20px;
     text-align: center;
 }
-.lead-magnet form, .contact form {
+.lead-magnet form {
     display: flex;
-    flex-direction: column;
     gap: 15px;
-    max-width: 400px;
-    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-input, textarea {
-    padding: 10px;
+input {
+    padding: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    width: 250px;
     font-size: 1rem;
 }
-textarea {
-    height: 100px;
-}
 
-.read-more {
-    color: #00D1FF;
-    text-decoration: none;
+.course, .inner-circle {
+    padding: 80px 20px;
+    text-align: center;
 }
-.read-more:hover {
-    color: #F7F7F7;
+.course-image {
+    width: 100%;
+    height: 300px;
+    background: #B0BEC5;
+    margin: 20px 0;
+    border-radius: 15px;
 }
 
 footer {
-    background-color: #121212;
     padding: 20px;
     text-align: center;
+    background: #121212;
+}
+
+/* Animaciones */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slide-up {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+[data-animation] {
+    opacity: 0;
 }
