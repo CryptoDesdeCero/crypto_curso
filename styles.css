@@ -119,7 +119,7 @@ input {
     font-size: 1rem;
 }
 
-.course, .inner-circle {
+.course {
     padding: 80px 20px;
     text-align: center;
 }
@@ -129,6 +129,110 @@ input {
     background: #B0BEC5;
     margin: 20px 0;
     border-radius: 15px;
+}
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.ebooks {
+    padding: 80px 20px;
+    text-align: center;
+}
+.ebooks-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.ebook-item {
+    background: rgba(18, 18, 18, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.ebook-item:hover {
+    transform: translateY(-10px);
+}
+.ebook-item h3 {
+    color: #00D1FF;
+    font-size: 1.6rem;
+}
+
+.blog {
+    padding: 80px 20px;
+    text-align: center;
+}
+.blog-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.blog-item {
+    background: rgba(18, 18, 18, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    width: 260px;
+    text-align: center;
+}
+.read-more {
+    color: #00D1FF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.read-more:hover {
+    color: #F7F7F7;
+}
+
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+input, textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+textarea {
+    height: 100px;
+}
+.whatsapp {
+    background: #00D1FF;
+    color: #121212;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.inner-circle-link {
+    padding: 40px 20px;
+    text-align: center;
+    background: #121212;
+}
+.inner-circle-link .cta {
+    background: #00D1FF;
+    color: #121212;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.inner-circle-link .cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 209, 255, 0.5);
 }
 
 footer {
