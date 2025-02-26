@@ -139,3 +139,121 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/manychat-widget"></script> -->
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoNow - Tu Puerta al Futuro Cripto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Particles.js para fondo animado -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Fondo de partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#curso">Curso</a></li>
+            <li><a href="#inner-circle">Inner Circle</a></li>
+            <li><a href="#ebooks">eBooks</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 data-animation="fade-in">Domina el Mundo Cripto</h1>
+            <p data-animation="fade-in" data-delay="0.3s">Estrategias reales. Seguridad primero.</p>
+            <a href="#lead-magnet" class="cta" data-animation="fade-in" data-delay="0.6s">Descarga Gratis</a>
+            <!-- Espacio para video -->
+            <div class="video-placeholder">🎥 [Inserta tu video aquí]</div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="benefits">
+        <div class="benefits-grid">
+            <div class="benefit-item" data-animation="slide-up">
+                <h3>🛡️ Seguridad</h3>
+                <p>Protege tus inversiones.</p>
+            </div>
+            <div class="benefit-item" data-animation="slide-up" data-delay="0.2s">
+                <h3>🎯 Estrategias</h3>
+                <p>Resultados reales.</p>
+            </div>
+            <div class="benefit-item" data-animation="slide-up" data-delay="0.4s">
+                <h3>👥 Comunidad</h3>
+                <p>Conecta y crece.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet -->
+    <section id="lead-magnet" class="lead-magnet">
+        <h2 data-animation="fade-in">Empieza Gratis</h2>
+        <p data-animation="fade-in" data-delay="0.2s">"5 Errores Costosos en Cripto"</p>
+        <form action="https://formspree.io/f/tu-id" method="POST">
+            <input type="email" name="email" placeholder="Tu email" required>
+            <button type="submit" class="cta">Descargar</button>
+        </form>
+    </section>
+
+    <!-- Curso -->
+    <section id="curso" class="course">
+        <h2 data-animation="fade-in">El Curso Definitivo</h2>
+        <div class="course-image">[Tu imagen de Leonardo.AI aquí]</div>
+        <a href="#precios" class="cta" data-animation="fade-in" data-delay="0.3s">Únete con 30% OFF</a>
+    </section>
+
+    <!-- Inner Circle -->
+    <section id="inner-circle" class="inner-circle">
+        <h2 data-animation="fade-in">Inner Circle</h2>
+        <p data-animation="fade-in" data-delay="0.2s">Mentoría y señales en tiempo real.</p>
+        <a href="#precios" class="cta" data-animation="fade-in" data-delay="0.4s">Accede Ahora</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CryptoNow</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializar Particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#00D1FF' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5 },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 2, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }
+            }
+        });
+
+        // Animaciones al hacer scroll
+        const animateOnScroll = () => {
+            document.querySelectorAll('[data-animation]').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const delay = el.getAttribute('data-delay') || '0s';
+                if (rect.top < window.innerHeight - 100) {
+                    el.style.animation = `${el.getAttribute('data-animation')} 0.8s ease ${delay} forwards`;
+                }
+            });
+        };
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll();
+    </script>
+</body>
+</html>
