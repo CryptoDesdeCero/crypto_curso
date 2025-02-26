@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso - CryptoNow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="placeholder">
+        <h1>Página del Curso (Placeholder)</h1>
+        <p>Agrega aquí:</p>
+        <ul>
+            <li>Descripción detallada del curso (módulos, duración, requisitos).</li>
+            <li>Un video explicativo sobre el contenido (usando HeyGen o similar).</li>
+            <li>Botón de pago con Stripe o PayPal para $249.99 USD.</li>
+            <li>Opción de acceso al material (puedes usar un iframe para Google Drive o un sistema de descarga).</li>
+            <li>Testimonios y prueba social.</li>
+        </ul>
+        <a href="index.html" class="cta">Regresar</a>
+    </section>
+</body>
+</html>
